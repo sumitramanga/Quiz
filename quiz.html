@@ -24,7 +24,7 @@
       .container {
         width: 85%;
         margin: auto;
-        margin-top: 60%;
+        margin-top: 153px;
       }
 
       .form {
@@ -32,10 +32,13 @@
         font-family: 'Lato', sans-serif;
       }
 
-      .question {
+      .text {
         font-family: 'lato';
-        font-size: 30px;
         text-align: center;
+      }
+
+      .question {
+        font-size: 30px;
       }
 
       .input {
@@ -56,32 +59,49 @@
         border: none;
         border-radius: 14px;
       }
+
+      .message {
+        font-size: 15px;
+        margin-top: 49px;
+      }
+
     </style>
   </head>
   <body>
     <div class="container">
-      <h1 class="question" id="message"> What is the capital city of Thailand?</h1>
+      <h1 class="question text"> What is the capital city of Thailand?</h1>
       <form class="form" action="" method="post">
-        <input type="text" class="input" id="answer"><br>
+        <input type="text" class="input" id="answerInput"><br>
         <button type="button" id="button" class="button" name="button">Check Answer</button>
       </form>
+      <div class="message text" id="message"></div>
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 
     <script type="text/javascript">
 
-    var true =  'Bangkok';
-    var false = 'Sydney';
-    var el = document.getElementById ('answer');
-
     $(document).ready(function(){
-      if (.input == 'Bangkok') {
-        el.innerHTML = 'Excellent! The answer is correct';
-      } else {
-        el.innerHTML = 'Wrong, please try again';
-      }
-    });
+
+      //Making a variable with the "button" which is grabbing the element with the ID name "button".
+      var button = document.getElementById ('button');
+
+      //Making a variable with the "showMessage" which is grabbing the element with the ID name "message".
+      var showMessage = document.getElementById ('message');
+
+      //This will make the message appear in the dom on click
+        $('#button').click(function() {
+          //Making a variable with the "inputValue" which is grabbing the element with the ID name "answerInput".
+          var inputValue = document.getElementById ('answerInput').value; // ".value" targets the value property.
+          // console.dir(answerInput); //Get the properties in the console.
+
+          if (inputValue == 'Bangkok') {
+            message.innerHTML = 'Excellent! The answer is correct.';
+          } else {
+            message.innerHTML = 'Sorry, The answer is incorrect. Please try again.';
+          }
+        });
+      });
 
     </script>
   </body>
