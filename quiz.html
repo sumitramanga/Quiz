@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Quiz</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        background: linear-gradient(#3A1C71, #D76D77, #FFAF7B);
+        background-repeat: no-repeat;
+      }
+      .container {
+        width: 85%;
+        margin: auto;
+        margin-top: 60%;
+      }
+
+      .form {
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+      }
+
+      .question {
+        font-family: 'lato';
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .input {
+        width: 85%;
+        height: 41px;
+        padding: 5px 10px;
+        margin: 32px 0;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .button {
+        padding: 10px 39px;
+        background-color: #1A2B64;
+        color: white;
+        font-family: 'lato';
+        font-size: 17px;
+        border: none;
+        border-radius: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="question" id="message"> What is the capital city of Thailand?</h1>
+      <form class="form" action="" method="post">
+        <input type="text" class="input" id="answer"><br>
+        <button type="button" id="button" class="button" name="button">Check Answer</button>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    var true =  'Bangkok';
+    var false = 'Sydney';
+    var el = document.getElementById ('answer');
+
+    $(document).ready(function(){
+      if (.input == 'Bangkok') {
+        el.innerHTML = 'Excellent! The answer is correct';
+      } else {
+        el.innerHTML = 'Wrong, please try again';
+      }
+    });
+
+    </script>
+  </body>
+</html>
