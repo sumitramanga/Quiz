@@ -93,8 +93,9 @@
         $('#button').click(function() {
           //Making a variable with the "inputValue" which is grabbing the element with the ID name "answerInput".
           var inputValue = document.getElementById ('answerInput').value; // ".value" targets the value property.
-          // console.dir(answerInput); //Get the properties in the console.
+          // console.dir(answerInput); //View the properties in the console.
 
+          // This if else statment determines what message should appear when the user has enter 
           if (inputValue == 'Bangkok') {
             message.innerHTML = 'Excellent! The answer is correct.';
           } else {
