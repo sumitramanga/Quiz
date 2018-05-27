@@ -21,6 +21,7 @@
         background: linear-gradient(#3A1C71, #D76D77, #FFAF7B);
         background-repeat: no-repeat;
       }
+
       .container {
         width: 85%;
         margin: auto;
@@ -64,9 +65,9 @@
         font-size: 15px;
         margin-top: 49px;
       }
-
     </style>
   </head>
+
   <body>
     <div class="container">
       <h1 class="question text"> What is the capital city of Thailand?</h1>
@@ -90,19 +91,24 @@
       var showMessage = document.getElementById ('message');
 
       //This will make the message appear in the dom on click
-        $('#button').click(function() {
-          //Making a variable with the "inputValue" which is grabbing the element with the ID name "answerInput".
-          var inputValue = document.getElementById ('answerInput').value; // ".value" targets the value property.
-          // console.dir(answerInput); //View the properties in the console.
+      $('#button').click(function() {
+        //Making a variable with the "inputValue" which is grabbing the element with the ID name "answerInput".
+        //".value" targets the value property.
+        var inputValue = document.getElementById ('answerInput').value;
 
-          // This if else statment determines what message should appear when the user has enter the answer within the inputß
-          if (inputValue == 'Bangkok') {
-            message.innerHTML = 'Excellent! The answer is correct.';
-          } else {
-            message.innerHTML = 'Sorry, The answer is incorrect. Please try again.';
-          }
-        });
-      });
+        //View the properties in the console.
+        // console.dir(answerInput);
+
+        //This if else statment determines what message should appear when the user has enter an answer within the input field
+        // "||" = or
+        if (inputValue == 'Bangkok' || inputValue == 'bangkok') {
+          message.innerHTML = 'Excellent! The answer is correct.';
+        } else {
+          message.innerHTML = 'Sorry, The answer is incorrect. Please try again.';
+        }
+      }); //Button ends
+
+    }); // Document Ready ends
 
     </script>
   </body>
