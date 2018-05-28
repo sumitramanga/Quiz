@@ -3,74 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Quiz</title>
-    <style media="screen">
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        height: 100%;
-      }
-
-      body {
-        background: linear-gradient(#3A1C71, #D76D77, #FFAF7B);
-        background-repeat: no-repeat;
-      }
-
-      .container {
-        width: 85%;
-        margin: auto;
-        margin-top: 153px;
-      }
-
-      .form {
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-      }
-
-      .text {
-        font-family: 'lato';
-        text-align: center;
-      }
-
-      .question {
-        font-size: 30px;
-      }
-
-      .input {
-        width: 85%;
-        height: 41px;
-        padding: 5px 10px;
-        margin: 32px 0;
-        font-size: 20px;
-        text-align: center;
-      }
-
-      .button {
-        padding: 10px 39px;
-        background-color: #1A2B64;
-        color: white;
-        font-family: 'lato';
-        font-size: 17px;
-        border: none;
-        border-radius: 14px;
-      }
-
-      .message {
-        font-size: 15px;
-        margin-top: 49px;
-      }
-    </style>
   </head>
 
   <body>
     <div class="container">
-      <h1 class="question text"> What is the capital city of Thailand?</h1>
+      <h1 class="question text"> What is the capital city of</h1>
+      <p class="thailand">Thailand</p>
       <form class="form" action="" method="post">
         <input type="text" class="input" id="answerInput"><br>
         <button type="button" id="button" class="button" name="button">Check Answer</button>
@@ -79,37 +20,6 @@
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-
-    <script type="text/javascript">
-
-    $(document).ready(function(){
-
-      //Making a variable with the "button" which is grabbing the element with the ID name "button".
-      var button = document.getElementById ('button');
-
-      //Making a variable with the "showMessage" which is grabbing the element with the ID name "message".
-      var showMessage = document.getElementById ('message');
-
-      //This will make the message appear in the dom on click
-      $('#button').click(function() {
-        //Making a variable with the "inputValue" which is grabbing the element with the ID name "answerInput".
-        //".value" targets the value property.
-        var inputValue = document.getElementById ('answerInput').value;
-
-        //View the properties in the console.
-        // console.dir(answerInput);
-
-        //This if else statment determines what message should appear when the user has enter an answer within the input field
-        // "||" = or
-        if (inputValue == 'Bangkok' || inputValue == 'bangkok') {
-          message.innerHTML = 'Excellent! The answer is correct.';
-        } else {
-          message.innerHTML = 'Sorry, The answer is incorrect. Please try again.';
-        }
-      }); //Button ends
-
-    }); // Document Ready ends
-
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

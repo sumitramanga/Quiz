@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(#3A1C71, #D76D77, #FFAF7B);
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 85%;
+  margin: 17% auto;
+}
+
+.form {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.text {
+  font-family: 'lato';
+  text-align: center;
+}
+
+.question {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.thailand {
+  font-family: 'Lobster Two', cursive;
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+
+}
+
+.input {
+  width: 85%;
+  height: 41px;
+  padding: 5px 10px;
+  margin: 32px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button {
+  padding: 10px 39px;
+  background-color: #1A2B64;
+  color: white;
+  font-family: 'lato';
+  font-size: 17px;
+  border: none;
+  border-radius: 14px;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-top: 49px;
+}
